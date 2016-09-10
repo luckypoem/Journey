@@ -84,7 +84,7 @@ var _template = {
                     '<h1 class="title">'+ data.title +'</h1>'+
                     '<time class="time">Updated at<span>'+ data.updated_at.split('T')[0] +'</span></time>'+
                     '<section class="labels">'+ labels +'</section>'+
-                    '<section class="main hidden">'+
+                    '<section class="main">'+
                     '<article class="content">'+ marked(data.body) +'</article>'+
                     '</section>'+ comment;
             

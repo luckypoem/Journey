@@ -21,3 +21,20 @@ html.loading body:after,html.loading body:before{vertical-align:middle;content:'
 ::-webkit-scrollbar-thumb:hover {
   background: #bdc3c7
 }
+
+.postImage{
+	height: 70px;
+    width: 70px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.postWrap{
+	position: relative;
+	padding-right: 85px;
+}
