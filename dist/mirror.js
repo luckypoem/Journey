@@ -51,19 +51,10 @@ var _template = {
 
         for (var i = 0; i < data.length; i ++) {
         	image = data[i].body.match(/!\[.*?\]\((.*?)\)/);
-            if(image){
-            	issues += '<a class="post" href="#'+ data[i].number +'"><section class="postWrap">'+
+            issues += '<a class="post" href="#'+ data[i].number +'"><section class="postWrap">'+
                      	'<h1>'+ data[i].title +'</h1>'+
-                     	'<time>Updated at<span>'+ data[i].updated_at.split('T')[0] +'</span></time>'+
-                     	'<div class="postImage" style="background-image:url(' + image[1] + ')"></div>' +
+                     	'<time>Updated at  <span>'+ data[i].updated_at.split('T')[0] +'</span></time>'+
                      	'</section></a>';
-
-            }else{
-            	issues += '<a class="post" href="#'+ data[i].number +'"><section class="postWrap">'+
-                     	'<h1>'+ data[i].title +'</h1>'+
-                     	'<time>Updated at<span>'+ data[i].updated_at.split('T')[0] +'</span></time>'+
-                     	'</section></a>';
-            }
         }
 
         return issues
@@ -82,7 +73,7 @@ var _template = {
 
             issue = '<div id="back">&laquo; back to home</div>'+
                     '<h1 class="title">'+ data.title +'</h1>'+
-                    '<time class="time">Updated at<span>'+ data.updated_at.split('T')[0] +'</span></time>'+
+                    '<time class="time">Updated at  <span>'+ data.updated_at.split('T')[0] +'</span></time>'+
                     '<section class="labels">'+ labels +'</section>'+
                     '<section class="main">'+
                     '<article class="content">'+ marked(data.body) +'</article>'+
